@@ -16,7 +16,7 @@ import javafx.stage.Stage;
  * @author Felipe
  */
 public class Algebra extends Application {
-    
+    public Integer puntuacion;
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("Inicio.fxml"));
