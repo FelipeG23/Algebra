@@ -10,7 +10,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="887.0" stylesheets="@../css/EstilosGenerales.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nivelUno.NivelUnoController">
+<AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="887.0" stylesheets="@../css/EstilosGenerales.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nivelDos.NivelDosController">
    <children>
       <Pane layoutX="14.0" layoutY="11.0" prefHeight="491.0" prefWidth="859.0" style="-fx-background-color: #01579B;">
          <children>
@@ -29,7 +29,7 @@
                   <Blend />
                </effect>
                <children>
-                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="96.0" text="0">
+                  <Label fx:id="numeroUno" alignment="CENTER" prefHeight="17.0" prefWidth="96.0" text="0">
                      <textFill>
                         <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
                            <stops>
@@ -42,7 +42,7 @@
                         <Font name="Copperplate Gothic Bold" size="53.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.columnIndex="1">
+                  <Label fx:id="numeroDos" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.columnIndex="1">
                      <font>
                         <Font name="Copperplate Gothic Bold" size="53.0" />
                      </font>
@@ -55,7 +55,7 @@
                         </LinearGradient>
                      </textFill>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="0" GridPane.rowIndex="2">
+                  <Label fx:id="numeroSiete" alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="0" GridPane.rowIndex="2">
                      <textFill>
                         <LinearGradient endX="1.0" endY="1.0">
                            <stops>
@@ -68,7 +68,7 @@
                         <Font name="Copperplate Gothic Bold" size="53.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="29.0" prefWidth="94.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <Label fx:id="numeroOcho" alignment="CENTER" prefHeight="29.0" prefWidth="94.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <textFill>
                         <LinearGradient endX="1.0" endY="1.0">
                            <stops>
@@ -81,7 +81,7 @@
                         <Font name="Copperplate Gothic Bold" size="53.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.columnIndex="2">
+                  <Label fx:id="numeroTres" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.columnIndex="2">
                      <font>
                         <Font name="Copperplate Gothic Bold" size="53.0" />
                      </font>
@@ -94,7 +94,7 @@
                         </LinearGradient>
                      </textFill>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.rowIndex="1">
+                  <Label fx:id="numeroCuatro" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.rowIndex="1">
                      <font>
                         <Font name="Copperplate Gothic Bold" size="53.0" />
                      </font>
@@ -107,7 +107,7 @@
                         </LinearGradient>
                      </textFill>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Label fx:id="numeroCinco" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font name="Copperplate Gothic Bold" size="53.0" />
                      </font>
@@ -120,7 +120,7 @@
                         </LinearGradient>
                      </textFill>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <Label fx:id="numeroSeis" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <font>
                         <Font name="Copperplate Gothic Bold" size="53.0" />
                      </font>
@@ -133,7 +133,7 @@
                         </LinearGradient>
                      </textFill>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <Label fx:id="numeroNueve" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <font>
                         <Font name="Copperplate Gothic Bold" size="53.0" />
                      </font>
@@ -160,7 +160,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="104.0" text="0" textAlignment="CENTER" GridPane.columnIndex="1">
+                  <Label fx:id="numeroOnce" alignment="CENTER" prefHeight="17.0" prefWidth="104.0" text="0" textAlignment="CENTER" GridPane.columnIndex="1">
                      <textFill>
                         <LinearGradient endX="1.0" endY="1.0">
                            <stops>
@@ -173,7 +173,7 @@
                         <Font name="Copperplate Gothic Bold" size="53.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="101.0" text="0" GridPane.columnIndex="2">
+                  <Label fx:id="numeroDoce" alignment="CENTER" prefHeight="17.0" prefWidth="101.0" text="0" GridPane.columnIndex="2">
                      <textFill>
                         <LinearGradient endX="1.0" endY="1.0">
                            <stops>
@@ -186,7 +186,7 @@
                         <Font name="Copperplate Gothic Bold" size="53.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="104.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <Label fx:id="numeroDiecesiete" alignment="CENTER" prefHeight="17.0" prefWidth="104.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <textFill>
                         <LinearGradient endX="1.0" endY="1.0">
                            <stops>
@@ -199,7 +199,7 @@
                         <Font name="Copperplate Gothic Bold" size="52.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="116.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <Label fx:id="numeroDieceocho" alignment="CENTER" prefHeight="17.0" prefWidth="116.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <textFill>
                         <LinearGradient endX="1.0" endY="1.0">
                            <stops>
@@ -225,7 +225,7 @@
                         </LinearGradient>
                      </textFill>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0">
+                  <Label fx:id="numeroDiez" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0">
                      <font>
                         <Font name="Copperplate Gothic Bold" size="53.0" />
                      </font>
@@ -238,7 +238,7 @@
                         </LinearGradient>
                      </textFill>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.rowIndex="1">
+                  <Label fx:id="numeroTrece" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.rowIndex="1">
                      <font>
                         <Font name="Copperplate Gothic Bold" size="53.0" />
                      </font>
@@ -251,7 +251,7 @@
                         </LinearGradient>
                      </textFill>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Label fx:id="numeroCatorce" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font name="Copperplate Gothic Bold" size="53.0" />
                      </font>
@@ -264,7 +264,7 @@
                         </LinearGradient>
                      </textFill>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <Label fx:id="numeroQuince" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <font>
                         <Font name="Copperplate Gothic Bold" size="53.0" />
                      </font>
@@ -277,7 +277,7 @@
                         </LinearGradient>
                      </textFill>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.rowIndex="2">
+                  <Label fx:id="numeroDieceseis" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.rowIndex="2">
                      <font>
                         <Font name="Copperplate Gothic Bold" size="53.0" />
                      </font>
