@@ -94,14 +94,21 @@ public class NivelUnoController implements Initializable {
                 Stage stage = new Stage();
                 Scene scene = new Scene(parent);
                 stage.setScene(scene);
-                stage.setTitle("NIVEL UNO");
+                stage.setTitle("NIVEL DOS");
                 stage.show();
             } else {
 
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setHeaderText(null);
-                alert.setContentText("INCORRECTO");
-                alert.show();
+//                Alert alert = new Alert(Alert.AlertType.ERROR);
+//                alert.setHeaderText(null);
+//                alert.setContentText("INCORRECTO");
+//                alert.show();
+                ((Node) (event.getSource())).getScene().getWindow().hide();
+                Parent parent = FXMLLoader.load(getClass().getResource("/nivelDos/NivelDos.fxml"));
+                Stage stage = new Stage();
+                Scene scene = new Scene(parent);
+                stage.setScene(scene);
+                stage.setTitle("NIVEL DOS");
+                stage.show();
             }
 
         } catch (Exception e) {

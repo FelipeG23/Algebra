@@ -14,7 +14,7 @@
    <children>
       <Pane layoutX="14.0" layoutY="11.0" prefHeight="491.0" prefWidth="859.0" style="-fx-background-color: #01579B;">
          <children>
-            <GridPane layoutX="37.0" layoutY="131.0" prefHeight="230.0" prefWidth="200.0" style="-fx-border-style: solid; -fx-border-color: white;">
+            <GridPane layoutX="14.0" layoutY="131.0" prefHeight="230.0" prefWidth="200.0" style="-fx-border-style: solid; -fx-border-color: white;">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -29,7 +29,7 @@
                   <Blend />
                </effect>
                <children>
-                  <Label fx:id="numeroUno" alignment="CENTER" prefHeight="17.0" prefWidth="96.0" text="0">
+                  <Label fx:id="numeroUno" alignment="CENTER" prefHeight="76.0" prefWidth="71.0" text="0">
                      <textFill>
                         <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
                            <stops>
@@ -39,12 +39,12 @@
                         </RadialGradient>
                      </textFill>
                      <font>
-                        <Font name="Copperplate Gothic Bold" size="53.0" />
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
                      </font>
                   </Label>
-                  <Label fx:id="numeroDos" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.columnIndex="1">
+                  <Label fx:id="numeroDos" alignment="CENTER" prefHeight="79.0" prefWidth="66.0" text="0" GridPane.columnIndex="1">
                      <font>
-                        <Font name="Copperplate Gothic Bold" size="53.0" />
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
                      </font>
                      <textFill>
                         <LinearGradient endX="1.0" endY="1.0">
@@ -65,7 +65,7 @@
                         </LinearGradient>
                      </textFill>
                      <font>
-                        <Font name="Copperplate Gothic Bold" size="53.0" />
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
                      </font>
                   </Label>
                   <Label fx:id="numeroOcho" alignment="CENTER" prefHeight="29.0" prefWidth="94.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -78,12 +78,12 @@
                         </LinearGradient>
                      </textFill>
                      <font>
-                        <Font name="Copperplate Gothic Bold" size="53.0" />
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
                      </font>
                   </Label>
-                  <Label fx:id="numeroTres" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.columnIndex="2">
+                  <Label fx:id="numeroTres" alignment="CENTER" prefHeight="75.0" prefWidth="66.0" text="0" GridPane.columnIndex="2">
                      <font>
-                        <Font name="Copperplate Gothic Bold" size="53.0" />
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
                      </font>
                      <textFill>
                         <LinearGradient endX="1.0" endY="1.0">
@@ -96,7 +96,7 @@
                   </Label>
                   <Label fx:id="numeroCuatro" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.rowIndex="1">
                      <font>
-                        <Font name="Copperplate Gothic Bold" size="53.0" />
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
                      </font>
                      <textFill>
                         <LinearGradient endX="1.0" endY="1.0">
@@ -109,7 +109,7 @@
                   </Label>
                   <Label fx:id="numeroCinco" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
-                        <Font name="Copperplate Gothic Bold" size="53.0" />
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
                      </font>
                      <textFill>
                         <LinearGradient endX="1.0" endY="1.0">
@@ -122,7 +122,7 @@
                   </Label>
                   <Label fx:id="numeroSeis" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <font>
-                        <Font name="Copperplate Gothic Bold" size="53.0" />
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
                      </font>
                      <textFill>
                         <LinearGradient endX="1.0" endY="1.0">
@@ -135,7 +135,7 @@
                   </Label>
                   <Label fx:id="numeroNueve" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <font>
-                        <Font name="Copperplate Gothic Bold" size="53.0" />
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
                      </font>
                      <textFill>
                         <LinearGradient endX="1.0" endY="1.0">
@@ -148,7 +148,7 @@
                   </Label>
                </children>
             </GridPane>
-            <GridPane alignment="CENTER" layoutX="300.0" layoutY="124.0" prefHeight="237.0" prefWidth="200.0" style="-fx-border-style: solid; -fx-border-color: white; -fx-background-fill: white;">
+            <GridPane alignment="CENTER" layoutX="278.0" layoutY="124.0" prefHeight="237.0" prefWidth="200.0" style="-fx-border-style: solid; -fx-border-color: white; -fx-background-fill: white;">
               <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -170,7 +170,7 @@
                         </LinearGradient>
                      </textFill>
                      <font>
-                        <Font name="Copperplate Gothic Bold" size="53.0" />
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
                      </font>
                   </Label>
                   <Label fx:id="numeroDoce" alignment="CENTER" prefHeight="17.0" prefWidth="101.0" text="0" GridPane.columnIndex="2">
@@ -183,7 +183,7 @@
                         </LinearGradient>
                      </textFill>
                      <font>
-                        <Font name="Copperplate Gothic Bold" size="53.0" />
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
                      </font>
                   </Label>
                   <Label fx:id="numeroDiecesiete" alignment="CENTER" prefHeight="17.0" prefWidth="104.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -196,7 +196,7 @@
                         </LinearGradient>
                      </textFill>
                      <font>
-                        <Font name="Copperplate Gothic Bold" size="52.0" />
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
                      </font>
                   </Label>
                   <Label fx:id="numeroDieceocho" alignment="CENTER" prefHeight="17.0" prefWidth="116.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="2">
@@ -209,25 +209,12 @@
                         </LinearGradient>
                      </textFill>
                      <font>
-                        <Font name="Copperplate Gothic Bold" size="53.0" />
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0">
+                  <Label fx:id="numeroDiez" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" textAlignment="CENTER">
                      <font>
-                        <Font name="Copperplate Gothic Bold" size="53.0" />
-                     </font>
-                     <textFill>
-                        <LinearGradient endX="1.0" endY="1.0">
-                           <stops>
-                              <Stop color="WHITE" />
-                              <Stop color="WHITE" offset="1.0" />
-                           </stops>
-                        </LinearGradient>
-                     </textFill>
-                  </Label>
-                  <Label fx:id="numeroDiez" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0">
-                     <font>
-                        <Font name="Copperplate Gothic Bold" size="53.0" />
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
                      </font>
                      <textFill>
                         <LinearGradient endX="1.0" endY="1.0">
@@ -240,7 +227,7 @@
                   </Label>
                   <Label fx:id="numeroTrece" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.rowIndex="1">
                      <font>
-                        <Font name="Copperplate Gothic Bold" size="53.0" />
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
                      </font>
                      <textFill>
                         <LinearGradient endX="1.0" endY="1.0">
@@ -253,7 +240,7 @@
                   </Label>
                   <Label fx:id="numeroCatorce" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
-                        <Font name="Copperplate Gothic Bold" size="53.0" />
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
                      </font>
                      <textFill>
                         <LinearGradient endX="1.0" endY="1.0">
@@ -266,7 +253,7 @@
                   </Label>
                   <Label fx:id="numeroQuince" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <font>
-                        <Font name="Copperplate Gothic Bold" size="53.0" />
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
                      </font>
                      <textFill>
                         <LinearGradient endX="1.0" endY="1.0">
@@ -279,7 +266,7 @@
                   </Label>
                   <Label fx:id="numeroDieceseis" alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="0" GridPane.rowIndex="2">
                      <font>
-                        <Font name="Copperplate Gothic Bold" size="53.0" />
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
                      </font>
                      <textFill>
                         <LinearGradient endX="1.0" endY="1.0">
@@ -301,12 +288,12 @@
                <font>
                   <Font name="Berlin Sans FB" size="29.0" />
                </font></JFXButton>
-            <Label alignment="CENTER" layoutX="241.0" layoutY="187.0" prefHeight="59.0" prefWidth="37.0" text="+" textFill="WHITE">
+            <Label alignment="CENTER" layoutX="223.0" layoutY="182.0" prefHeight="59.0" prefWidth="37.0" text="+" textFill="WHITE">
                <font>
                   <Font name="Copperplate Gothic Bold" size="72.0" />
                </font>
             </Label>
-            <GridPane layoutX="551.0" layoutY="124.0" prefHeight="237.0" prefWidth="286.0" styleClass="tabla">
+            <GridPane layoutX="509.0" layoutY="124.0" prefHeight="237.0" prefWidth="346.0" styleClass="tabla">
               <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -318,54 +305,54 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <JFXTextField alignment="CENTER" focusColor="WHITE" maxWidth="158.0" minWidth="108.0" prefHeight="119.0" prefWidth="158.0" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.columnIndex="1">
+                  <JFXTextField fx:id="valorDos" alignment="CENTER" focusColor="WHITE" maxWidth="158.0" minWidth="108.0" prefHeight="119.0" prefWidth="158.0" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.columnIndex="1">
                      <font>
                         <Font size="45.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField alignment="CENTER" focusColor="WHITE" maxWidth="139.0" minWidth="114.0" prefHeight="119.0" prefWidth="139.0" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.columnIndex="2">
+                  <JFXTextField fx:id="valorTres" alignment="CENTER" focusColor="WHITE" maxWidth="139.0" minWidth="114.0" prefHeight="119.0" prefWidth="139.0" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.columnIndex="2">
                      <font>
                         <Font size="45.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField alignment="CENTER" focusColor="WHITE" maxWidth="95.0" minWidth="95.0" prefHeight="74.0" prefWidth="95.0" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <JFXTextField fx:id="valorOcho" alignment="CENTER" focusColor="WHITE" maxWidth="164.0" minWidth="95.0" prefHeight="102.0" prefWidth="164.0" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <font>
                         <Font size="45.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField alignment="CENTER" focusColor="WHITE" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <JFXTextField fx:id="valorNueve" alignment="CENTER" focusColor="WHITE" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <font>
                         <Font size="45.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField alignment="CENTER" focusColor="WHITE" maxWidth="158.0" minWidth="108.0" prefHeight="76.0" prefWidth="130.0" style="-fx-text-fill: white;" unFocusColor="WHITE">
+                  <JFXTextField fx:id="valorUno" alignment="CENTER" focusColor="WHITE" maxWidth="231.0" minWidth="108.0" prefHeight="73.0" prefWidth="115.0" style="-fx-text-fill: white;" unFocusColor="WHITE">
                      <font>
                         <Font size="45.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField alignment="CENTER" focusColor="WHITE" maxWidth="158.0" minWidth="108.0" prefHeight="119.0" prefWidth="158.0" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.rowIndex="1">
+                  <JFXTextField fx:id="valorCuatro" alignment="CENTER" focusColor="WHITE" maxWidth="364.0" minWidth="108.0" prefHeight="102.0" prefWidth="390.0" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.rowIndex="1">
                      <font>
                         <Font size="45.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField alignment="CENTER" focusColor="WHITE" maxWidth="158.0" minWidth="86.0" prefHeight="102.0" prefWidth="139.0" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.rowIndex="2">
+                  <JFXTextField fx:id="valorSiete" alignment="CENTER" focusColor="WHITE" maxWidth="164.0" minWidth="86.0" prefHeight="102.0" prefWidth="164.0" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.rowIndex="2">
                      <font>
                         <Font size="45.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField alignment="CENTER" focusColor="WHITE" maxWidth="158.0" minWidth="108.0" prefHeight="119.0" prefWidth="158.0" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <JFXTextField fx:id="valorCinco" alignment="CENTER" focusColor="WHITE" maxWidth="158.0" minWidth="108.0" prefHeight="119.0" prefWidth="158.0" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font size="45.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField alignment="CENTER" focusColor="WHITE" maxWidth="158.0" minWidth="108.0" prefHeight="119.0" prefWidth="158.0" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <JFXTextField fx:id="valorSeis" alignment="CENTER" focusColor="WHITE" maxWidth="158.0" minWidth="108.0" prefHeight="119.0" prefWidth="158.0" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <font>
                         <Font size="45.0" />
                      </font>
                   </JFXTextField>
                </children>
             </GridPane>
-            <Label layoutX="509.0" layoutY="204.0" prefHeight="60.0" prefWidth="29.0" text="=" textFill="WHITE">
+            <Label layoutX="479.0" layoutY="205.0" prefHeight="60.0" prefWidth="29.0" text="=" textFill="WHITE">
                <font>
                   <Font size="41.0" />
                </font>
