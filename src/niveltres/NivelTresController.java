@@ -11,8 +11,13 @@ import java.util.ResourceBundle;
 import java.util.concurrent.ThreadLocalRandom;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -67,19 +72,24 @@ public class NivelTresController implements Initializable {
 
     public void comprobarResultado(ActionEvent event) {
         try {
-            Integer resultadoUno = Integer.parseInt(escalar.getText()) + Integer.parseInt(numeroUno.getText());
-            Integer resultadoDos = Integer.parseInt(escalar.getText()) + Integer.parseInt(numeroDos.getText());
-            Integer resultadoTres = Integer.parseInt(escalar.getText()) + Integer.parseInt(numeroTres.getText());
-            Integer resultadoCuatro = Integer.parseInt(escalar.getText()) + Integer.parseInt(numeroCuatro.getText());
-            
-            if(resultadoUno.equals(Integer.parseInt(valorUno.getText())) &&
-               resultadoDos.equals(Integer.parseInt(valorDos.getText())) &&
-               resultadoTres.equals(Integer.parseInt(valorTres.getText()))&&
-               resultadoCuatro.equals(Integer.parseInt(valorCuatro.getText()))){
-                
+            Integer resultadoUno = Integer.parseInt(escalar.getText()) * Integer.parseInt(numeroUno.getText());
+            Integer resultadoDos = Integer.parseInt(escalar.getText()) * Integer.parseInt(numeroDos.getText());
+            Integer resultadoTres = Integer.parseInt(escalar.getText()) * Integer.parseInt(numeroTres.getText());
+            Integer resultadoCuatro = Integer.parseInt(escalar.getText()) * Integer.parseInt(numeroCuatro.getText());
+
+            if (resultadoUno.equals(Integer.parseInt(valorUno.getText()))
+                    && resultadoDos.equals(Integer.parseInt(valorDos.getText()))
+                    && resultadoTres.equals(Integer.parseInt(valorTres.getText()))
+                    && resultadoCuatro.equals(Integer.parseInt(valorCuatro.getText()))) {
             }
-            
-            
+            ((Node) (event.getSource())).getScene().getWindow().hide();
+            Parent parent = FXMLLoader.load(getClass().getResource("/nivelCuatro/cuartoNivel.fxml"));
+            Stage stage = new Stage();
+            Scene scene = new Scene(parent);
+            stage.setScene(scene);
+            stage.setTitle("NIVEL CUATRO");
+            stage.show();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
