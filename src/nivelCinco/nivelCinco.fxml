@@ -10,9 +10,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="887.0" stylesheets="@../css/EstilosGenerales.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nivelCinco.NivelCincoController">
+<AnchorPane id="AnchorPane" prefHeight="510.0" prefWidth="881.0" stylesheets="@../css/EstilosGenerales.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nivelCinco.NivelCincoController">
    <children>
-      <Pane layoutX="14.0" layoutY="13.0" prefHeight="491.0" prefWidth="859.0" style="-fx-background-color: #01579B;">
+      <Pane layoutX="11.0" layoutY="10.0" prefHeight="491.0" prefWidth="859.0" style="-fx-background-color: #01579B;">
          <children>
             <GridPane layoutX="37.0" layoutY="131.0" prefHeight="230.0" prefWidth="200.0" style="-fx-border-style: solid; -fx-border-color: white;">
                <children>

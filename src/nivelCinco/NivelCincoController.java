@@ -11,8 +11,13 @@ import java.util.ResourceBundle;
 import java.util.concurrent.ThreadLocalRandom;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -88,8 +93,17 @@ public class NivelCincoController implements Initializable {
             Integer resultadoCuatro = Integer.parseInt(numeroTres.getText()) * Integer.parseInt(numeroSeis.getText()) + Integer.parseInt(numeroCuatro.getText()) * Integer.parseInt(numeroOcho.getText());
             if (resultadoUno.equals(Integer.parseInt(this.valorUno.getText())) && resultadoDos.equals(Integer.parseInt(this.valorDos.getText()))
                     && resultadoTres.equals(Integer.parseInt(this.valorTres.getText())) && resultadoCuatro.equals(Integer.parseInt(this.valorCuatro.getText()))) {
-                
+
             }
+
+            ((Node) (event.getSource())).getScene().getWindow().hide();
+            Parent parent = FXMLLoader.load(getClass().getResource("/nivelSeis/nivelSeis.fxml"));
+            Stage stage = new Stage();
+            Scene scene = new Scene(parent);
+            stage.setScene(scene);
+            stage.setTitle("NIVEL SEIS");
+            stage.show();
+
         } catch (Exception e) {
             e.printStackTrace();
         }

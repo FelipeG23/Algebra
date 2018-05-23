@@ -1,11 +1,214 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nivelSeis.NivelSeisController">
-    
+<AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="998.0" stylesheets="@../css/EstilosGenerales.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nivelSeis.NivelSeisController">
+    <children>
+        <Pane layoutX="9.0" layoutY="8.0" prefHeight="500.0" prefWidth="980.0" style="-fx-background-color: #01579B;">
+            <children>
+                <Label alignment="TOP_CENTER" layoutX="37.0" layoutY="38.0" prefHeight="60.0" prefWidth="540.0" text="NIVEL NÚMERO SEIS" textFill="WHITE">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="36.0" />
+               </font></Label>
+            <Label alignment="CENTER" layoutX="284.0" layoutY="230.0" prefHeight="34.0" prefWidth="46.0" text="*" textFill="WHITE">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="36.0" />
+               </font>
+            </Label>
+            <GridPane layoutX="341.0" layoutY="157.0" prefHeight="174.0" prefWidth="230.0" styleClass="tabla">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="numeroDiez" alignment="CENTER" contentDisplay="CENTER" prefHeight="81.0" prefWidth="149.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numeroDieciseis" alignment="CENTER" prefHeight="92.0" prefWidth="149.0" text="0" textFill="WHITE" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numeroDiecisiete" alignment="CENTER" prefHeight="86.0" prefWidth="148.0" text="0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numeroTrece" alignment="CENTER" prefHeight="92.0" prefWidth="149.0" text="0" textFill="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numeroCatorce" alignment="CENTER" prefHeight="92.0" prefWidth="149.0" text="0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numeroQuince" alignment="CENTER" prefHeight="89.0" prefWidth="148.0" text="0" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numeroDieciOcho" alignment="CENTER" prefHeight="89.0" prefWidth="148.0" text="0" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numeroDoce" alignment="CENTER" prefHeight="89.0" prefWidth="148.0" text="0" textFill="WHITE" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numeroOnce" alignment="CENTER" prefHeight="89.0" prefWidth="148.0" text="0" textFill="WHITE" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <Label layoutX="571.0" layoutY="190.0" text="=" textFill="WHITE">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="71.0" />
+               </font>
+            </Label>
+            <GridPane layoutX="628.0" layoutY="157.0" prefHeight="174.0" prefWidth="338.0" styleClass="tabla">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <JFXTextField fx:id="valorTres" alignment="CENTER" focusColor="WHITE" maxWidth="162.0" minWidth="95.0" prefHeight="102.0" prefWidth="120.0" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="valorCuatro" alignment="CENTER" focusColor="WHITE" maxWidth="162.0" minWidth="95.0" prefHeight="102.0" prefWidth="120.0" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="valorSeis" alignment="CENTER" focusColor="WHITE" maxWidth="162.0" minWidth="95.0" prefHeight="102.0" prefWidth="120.0" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="valorSiete" alignment="CENTER" focusColor="WHITE" maxWidth="162.0" minWidth="95.0" prefHeight="102.0" prefWidth="120.0" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="valorNueve" alignment="CENTER" focusColor="WHITE" maxWidth="162.0" minWidth="95.0" prefHeight="102.0" prefWidth="120.0" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="valorDos" alignment="CENTER" focusColor="WHITE" maxWidth="162.0" minWidth="95.0" prefHeight="102.0" prefWidth="120.0" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="valorCinco" alignment="CENTER" focusColor="WHITE" maxWidth="162.0" minWidth="95.0" prefHeight="102.0" prefWidth="120.0" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="valorOcho" alignment="CENTER" focusColor="WHITE" maxWidth="162.0" minWidth="95.0" prefHeight="102.0" prefWidth="120.0" style="-fx-text-fill: white;" unFocusColor="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="valorUno" alignment="CENTER" focusColor="WHITE" maxWidth="162.0" minWidth="95.0" prefHeight="102.0" prefWidth="120.0" style="-fx-text-fill: white;" unFocusColor="WHITE">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </GridPane>
+            <JFXButton layoutX="584.0" layoutY="399.0" onAction="#comprobarResultado" prefHeight="46.0" prefWidth="230.0" style="-fx-background-color: #8BC34A;" text="TERMINAR" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="29.0" />
+               </font>
+            </JFXButton>
+            <GridPane layoutX="17.0" layoutY="157.0" prefHeight="174.0" prefWidth="267.0" styleClass="tabla">
+               <children>
+                  <Label fx:id="numeroUno" alignment="CENTER" contentDisplay="CENTER" prefHeight="81.0" prefWidth="149.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numeroDos" alignment="CENTER" prefHeight="89.0" prefWidth="148.0" text="0" textFill="WHITE" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numeroSiete" alignment="CENTER" prefHeight="92.0" prefWidth="149.0" text="0" textFill="WHITE" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numeroOcho" alignment="CENTER" prefHeight="86.0" prefWidth="148.0" text="0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numeroCuatro" alignment="CENTER" prefHeight="92.0" prefWidth="149.0" text="0" textFill="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numeroCinco" alignment="CENTER" prefHeight="92.0" prefWidth="149.0" text="0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numeroSeis" alignment="CENTER" prefHeight="89.0" prefWidth="148.0" text="0" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numeroNueve" alignment="CENTER" prefHeight="89.0" prefWidth="148.0" text="0" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numeroTres" alignment="CENTER" prefHeight="89.0" prefWidth="148.0" text="0" textFill="WHITE" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>         
+            </children>
+        </Pane>
+    </children>
 </AnchorPane>
