@@ -16,8 +16,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import nivelCinco.NivelCincoController;
 
 /**
  * FXML Controller class
@@ -83,6 +85,12 @@ public class CuartoNivelController implements Initializable {
     @FXML
     private JFXTextField valorCuatro;
 
+    Integer puntajeFinal = 0;
+
+    public void recibirPuntaje(Integer puntajeAnt) {
+        this.puntajeFinal = puntajeAnt;
+    }
+
     /**
      * Initializes the controller class.
      */
@@ -131,11 +139,29 @@ public class CuartoNivelController implements Initializable {
                     && resultadoSiete.equals(Integer.parseInt(this.valorSiete.getText()))
                     && resultadoOcho.equals(Integer.parseInt(this.valorOcho.getText()))
                     && resultadoNueve.equals(Integer.parseInt(this.valorNueve.getText()))) {
+                puntajeFinal = puntajeFinal + 7;
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Atención");
+                alert.setHeaderText(null);
+                alert.setContentText("Respuesta correcta!");
+
+                alert.showAndWait();
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Atención");
+                alert.setHeaderText(null);
+                alert.setContentText("Respuesta Incorrecta!");
+
+                alert.showAndWait();
             }
+
             ((Node) (event.getSource())).getScene().getWindow().hide();
-            Parent parent = FXMLLoader.load(getClass().getResource("/nivelCinco/nivelCinco.fxml"));
+            FXMLLoader fxml = new FXMLLoader(getClass().getResource("/nivelCinco/nivelCinco.fxml"));
+            Parent root = (Parent) fxml.load();
+            NivelCincoController controlador = fxml.getController();
+            controlador.recibirPuntaje(puntajeFinal);
             Stage stage = new Stage();
-            Scene scene = new Scene(parent);
+            Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.setTitle("NIVEL CINCO");
             stage.show();

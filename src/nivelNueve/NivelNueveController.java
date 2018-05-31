@@ -16,8 +16,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import nivelDiez.NivelDiezController;
 
 /**
  * FXML Controller class
@@ -40,20 +42,42 @@ public class NivelNueveController implements Initializable {
 
     @FXML
     private Label numeroTres;
+    Integer puntajeFinal = 0;
+
+    public void recibirPuntaje(Integer puntajeAnt) {
+        this.puntajeFinal = puntajeAnt;
+    }
 
     @FXML
     void comprobarResultado(ActionEvent event) {
         try {
             Integer resultado = Integer.parseInt(numeroUno.getText()) * Integer.parseInt(numeroCuatro.getText()) - Integer.parseInt(numeroDos.getText()) * Integer.parseInt(numeroTres.getText());
             if (resultado.equals(Integer.parseInt(resultadoInput.getText()))) {
+                puntajeFinal = puntajeFinal + 17;
+                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Atención");
+                alert.setHeaderText(null);
+                alert.setContentText("Respuesta correcta!");
 
+                alert.showAndWait();
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Atención");
+                alert.setHeaderText(null);
+                alert.setContentText("Respuesta Incorrecta!");
+
+                alert.showAndWait();
             }
             ((Node) (event.getSource())).getScene().getWindow().hide();
-            Parent parent = FXMLLoader.load(getClass().getResource("/nivelDiez/nivelDiez.fxml"));
+            FXMLLoader fxml = new FXMLLoader(getClass().getResource("/nivelDiez/nivelDiez.fxml"));
+            Parent root = (Parent) fxml.load();
+            NivelDiezController controlador = fxml.getController();
+            controlador.recibirPuntaje(puntajeFinal);
             Stage stage = new Stage();
-            Scene scene = new Scene(parent);
+            Scene scene = new Scene(root);
             stage.setScene(scene);
-            stage.setTitle("NIVEL DIEZ");
+
+            stage.setTitle("NIVEL DIEZ" );
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();

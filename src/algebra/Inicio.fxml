@@ -23,7 +23,7 @@
                   <Font name="Cooper Black" size="21.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="146.0" layoutY="239.0" prefHeight="45.0" prefWidth="283.0" style="-fx-background-color: #03A9F4;" text="INSTRUCCIONES" textFill="WHITE">
+            <JFXButton layoutX="146.0" layoutY="239.0" onAction="#mostrarInstrucciones" prefHeight="45.0" prefWidth="283.0" style="-fx-background-color: #03A9F4;" text="INSTRUCCIONES" textFill="WHITE">
                <font>
                   <Font name="Cooper Black" size="21.0" />
                </font>

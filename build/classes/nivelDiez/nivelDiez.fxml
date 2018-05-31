@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import com.jfoenix.controls.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.paint.*?>
@@ -10,10 +9,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="887.0" stylesheets="@../css/EstilosGenerales.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nivelDiez.NivelDiezController">
-   <children>
-      <Pane layoutX="14.0" layoutY="13.0" prefHeight="491.0" prefWidth="859.0" style="-fx-background-color: #01579B;">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="nivelDiez.NivelDiezController">
+    <children>
+      <Pane layoutX="-3.0" layoutY="-8.0" prefHeight="491.0" prefWidth="859.0" style="-fx-background-color: #01579B;">
          <children>
             <GridPane layoutX="137.0" layoutY="131.0" prefHeight="230.0" prefWidth="200.0" style="-fx-border-style: solid; -fx-border-color: white;">
                <children>

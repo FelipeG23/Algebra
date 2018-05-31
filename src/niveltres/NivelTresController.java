@@ -16,8 +16,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import nivelCuatro.CuartoNivelController;
 
 /**
  * FXML Controller class
@@ -52,6 +54,11 @@ public class NivelTresController implements Initializable {
 
     @FXML
     private JFXTextField valorCuatro;
+    private Integer puntajeFinal = 0;
+
+    public void recibirPuntaje(Integer puntajeAnt) {
+        this.puntajeFinal = puntajeAnt;
+    }
 
     /**
      * Initializes the controller class.
@@ -81,11 +88,29 @@ public class NivelTresController implements Initializable {
                     && resultadoDos.equals(Integer.parseInt(valorDos.getText()))
                     && resultadoTres.equals(Integer.parseInt(valorTres.getText()))
                     && resultadoCuatro.equals(Integer.parseInt(valorCuatro.getText()))) {
+
+                puntajeFinal = puntajeFinal + 5;
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Atención");
+                alert.setHeaderText(null);
+                alert.setContentText("Respuesta correcta!");
+
+                alert.showAndWait();
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Atención");
+                alert.setHeaderText(null);
+                alert.setContentText("Respuesta Incorrecta!");
+
+                alert.showAndWait();
             }
             ((Node) (event.getSource())).getScene().getWindow().hide();
-            Parent parent = FXMLLoader.load(getClass().getResource("/nivelCuatro/cuartoNivel.fxml"));
+            FXMLLoader fxml = new FXMLLoader(getClass().getResource("/nivelCuatro/cuartoNivel.fxml"));
+            Parent root = (Parent) fxml.load();
+            CuartoNivelController controlador = fxml.getController();
+            controlador.recibirPuntaje(puntajeFinal);
             Stage stage = new Stage();
-            Scene scene = new Scene(parent);
+            Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.setTitle("NIVEL CUATRO");
             stage.show();

@@ -8,8 +8,6 @@ package algebra;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -42,7 +40,21 @@ public class InicioController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+
     }
 
+    @FXML
+    void mostrarInstrucciones(ActionEvent event) {
+        try {
+            FXMLLoader fxml = new FXMLLoader(getClass().getResource("/instrucciones/Instrucciones.fxml"));
+            Parent root = (Parent) fxml.load();
+            Stage stage = new Stage();
+            stage.setTitle("INSTRUCCIONES");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 }

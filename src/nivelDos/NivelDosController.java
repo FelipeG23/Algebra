@@ -19,6 +19,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import niveltres.NivelTresController;
 
 /**
  * FXML Controller class
@@ -82,6 +83,8 @@ public class NivelDosController implements Initializable {
     @FXML
     private JFXTextField valorNueve;
 
+    Integer puntajeFinal = 0;
+
     /**
      * Initializes the controller class.
      */
@@ -125,6 +128,10 @@ public class NivelDosController implements Initializable {
         numeroDieceocho.setText(randomNum.toString());
     }
 
+    public void recibirPuntaje(Integer puntajeAnt) {
+        this.puntajeFinal = puntajeAnt;
+    }
+
     public void comprobarResultado(ActionEvent event) {
         try {
             Integer resultadoUno = Integer.parseInt(numeroUno.getText()) + Integer.parseInt(numeroDiez.getText());
@@ -146,26 +153,34 @@ public class NivelDosController implements Initializable {
                     && resultadoSeptimo.equals(Integer.parseInt(this.valorSiete.getText()))
                     && resultadoOctavo.equals(Integer.parseInt(this.valorOcho.getText()))
                     && resultadoNoveno.equals(Integer.parseInt(this.valorNueve.getText()))) {
-
+                puntajeFinal = puntajeFinal + 3;
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Atención");
                 alert.setHeaderText(null);
-                alert.setContentText("CORRECTO");
-                alert.show();
-                ((Node) (event.getSource())).getScene().getWindow().hide();
-                Parent parent = FXMLLoader.load(getClass().getResource("/niveltres/NivelTres.fxml"));
-                Stage stage = new Stage();
-                Scene scene = new Scene(parent);
-                stage.setScene(scene);
-                stage.setTitle("NIVEL UNO");
-                stage.show();
+                alert.setContentText("Respuesta correcta!");
+
+                alert.showAndWait();
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Atención");
+                alert.setHeaderText(null);
+                alert.setContentText("Respuesta Incorrecta!");
+
+                alert.showAndWait();
             }
+
             ((Node) (event.getSource())).getScene().getWindow().hide();
-            Parent parent = FXMLLoader.load(getClass().getResource("/niveltres/NivelTres.fxml"));
+            FXMLLoader fxml = new FXMLLoader(getClass().getResource("/niveltres/NivelTres.fxml"));
+            Parent root = (Parent) fxml.load();
+            NivelTresController controlador = fxml.getController();
+            controlador.recibirPuntaje(puntajeFinal);
             Stage stage = new Stage();
-            Scene scene = new Scene(parent);
+            Scene scene = new Scene(root);
             stage.setScene(scene);
+
             stage.setTitle("NIVEL TRES");
             stage.show();
+
         } catch (Exception e) {
             e.printStackTrace();
         }

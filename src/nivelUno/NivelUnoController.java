@@ -17,8 +17,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import nivelDos.NivelDosController;
 
 /**
  * FXML Controller class
@@ -52,6 +54,8 @@ public class NivelUnoController implements Initializable {
     @FXML
     private JFXTextField valorCuatro;
 
+    Integer puntajeFinal = 0;
+
     /**
      * Initializes the controller class.
      */
@@ -84,32 +88,32 @@ public class NivelUnoController implements Initializable {
 
             if (resultadoUno.equals(Integer.parseInt(this.valorUno.getText())) && resultadoDos.equals(Integer.parseInt(this.valorDos.getText()))
                     && resultadoTres.equals(Integer.parseInt(this.valorTres.getText())) && resultadoCuatro.equals(Integer.parseInt(this.valorCuatro.getText()))) {
-
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                puntajeFinal = 1;
+                Alert alert = new Alert(AlertType.INFORMATION);
+                alert.setTitle("Atención");
                 alert.setHeaderText(null);
-                alert.setContentText("CORRECTO");
-                alert.show();
-                ((Node) (event.getSource())).getScene().getWindow().hide();
-                Parent parent = FXMLLoader.load(getClass().getResource("/nivelDos/NivelDos.fxml"));
-                Stage stage = new Stage();
-                Scene scene = new Scene(parent);
-                stage.setScene(scene);
-                stage.setTitle("NIVEL DOS");
-                stage.show();
-            } else {
+                alert.setContentText("Respuesta correcta!");
 
-//                Alert alert = new Alert(Alert.AlertType.ERROR);
-//                alert.setHeaderText(null);
-//                alert.setContentText("INCORRECTO");
-//                alert.show();
-                ((Node) (event.getSource())).getScene().getWindow().hide();
-                Parent parent = FXMLLoader.load(getClass().getResource("/nivelDos/NivelDos.fxml"));
-                Stage stage = new Stage();
-                Scene scene = new Scene(parent);
-                stage.setScene(scene);
-                stage.setTitle("NIVEL DOS");
-                stage.show();
+                alert.showAndWait();
+            } else {
+                Alert alert = new Alert(AlertType.ERROR);
+                alert.setTitle("Atención");
+                alert.setHeaderText(null);
+                alert.setContentText("Respuesta Incorrecta!");
+
+                alert.showAndWait();
             }
+            ((Node) (event.getSource())).getScene().getWindow().hide();
+            FXMLLoader fxml = new FXMLLoader(getClass().getResource("/nivelDos/NivelDos.fxml"));
+            Parent root = (Parent) fxml.load();
+            NivelDosController controlador = fxml.getController();
+            controlador.recibirPuntaje(puntajeFinal);
+            Stage stage = new Stage();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+
+            stage.setTitle("NIVEL DOS");
+            stage.show();
 
         } catch (Exception e) {
             e.printStackTrace();
